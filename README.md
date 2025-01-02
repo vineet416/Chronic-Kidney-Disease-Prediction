@@ -72,9 +72,10 @@ Machine Learning models are created by following Algorithms
 8. XG Boost Classifier  
 
 ## 6. Hyperparameter tunning  
-Perform the hyperparameter tuning to avoid the overfitting in model.   
-![image](https://github.com/user-attachments/assets/ecb61c39-10fd-4ede-a803-fcdeb63ff0c7)
+Perform the hyperparameter tuning to avoid the overfitting in model.     
+![image](https://github.com/user-attachments/assets/fa36120a-fc29-4e33-9323-3431504b6d85)
 
-We got 97.5% accuracy score in Ada Boost Classifier, XGBoost Classifier and Random Forest Classifier.  
+
+We got 97.5% accuracy score in SVM, XGBoost Classifier, Ada Boost Classifier, and Random Forest Classifier  
 
 
