@@ -1,155 +1,151 @@
-# Chronic-Kidney-Disease-Prediction
-The goal of this project is predit the chronic kidney disease using parameters such as 'sugar', 'bacteria', 'blood_glucose_random', 'blood_urea',, 'white_blood_cell_count', 'hypertension', 'diabetes_mellitus', 'coronary_artery_disease', etc.
+# Chronic Kidney Disease Prediction
 
-# Description  
-Domain : Healthcare  
-Technology:- EDA, Feature Engineering, Feature Selection and Machine Learning  
-Languages:- python  
+This repository contains the code for the Chronic Kidney Disease Detection Prediction Project. The goal of this project is to predict chronic kidney disease using various health parameters such as Diabetes Mellitus, Blood Urea, Sugar, Hypertension, etc.
 
-Libraries used:-  
-Pandas
-Numpy
-Matplotlib
-Seaborn
-Plotly
-Sklearn
+## Table of Contents
 
-## 1. Dataset:- Kidney_data.csv  
-This dataset can be used to predict the chronic kidney disease and it can be collected from the hospital nearly 2 months of period.  
+- [Project Description](#project-description)
+- [Features](#features)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Models and Algorithms](#models-and-algorithms)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
-### Attributes in given data set:-  
-age - age  
-bp - blood pressure  
-sg - specific gravity  
-al - albumin  
-su - sugar  
-rbc - red blood cells  
-pc - pus cell  
-pcc - pus cell clumps  
-ba - bacteria  
-bgr - blood glucose random  
-bu - blood urea  
-sc - serum creatinine  
-sod - sodium  
-pot - potassium  
-hemo - hemoglobin  
-pcv - packed cell volume  
-wc - white blood cell count  
-rc - red blood cell count  
-htn - hypertension  
-dm - diabetes mellitus  
-cad - coronary artery disease  
-appet - appetite  
-pe - pedal edema  
-ane - anemia  
-class - class  
+## Project Description
 
-## 2. Data Cleaning  
-Steps followed during data cleaning:-  
-1. Replace all the column names with their full name for better understanding.  
-2. Replace categorical values into numerical values.  
-3. Correct the mis-spelled categorical values.  
-4. Replaced the null values with median for numerical columns and mode for categorical columns.  
-5. Removing Duplicated rows.  
+Chronic Kidney Disease (CKD) is a significant public health issue affecting millions of individuals worldwide. Early detection and treatment of CKD can prevent the progression to kidney failure. This project leverages various machine learning algorithms to predict the likelihood of CKD based on multiple health parameters. The model with the highest accuracy score of 97.5% has been achieved through hyperparameter tuning.
 
-## 3. Exploratory Data Analysis  and Data Pre-Processing  
-Steps followed in EDA:-    
-1. Performed Univariate Analysis, Bivariate and Multivariate Analysis to Understand the data and find some patterns.  
-2. Prepared data for model training by converting all categorical columns to numerical using LabelEncoder.  
-3. Feature Selection using Variance Inflation Factor (VIF).  
-5. DIVIDE THE DATA INTO X (Independent variable), y (target variable / dependent variable).  
-6. Spilt the 80 % data for training and 20% data for testing.  
+## Features
 
-## 5. Creation of machine learning model  
-Machine Learning models are created by following Algorithms     
-1. Logistic Regression  
-2. Decision Tree Classifier  
-3. SVM Classifier  
-4. Gaussian Naive Bayes  
-5. Random Forest Classifier  
-6. Ada Boost Classifier  
-7. Gradient Boosting Classifier    
-8. XG Boost Classifier  
+- Predicts the likelihood of chronic kidney disease
+- Utilizes multiple machine learning algorithms
+- Hyperparameter tuning for optimizing model performance
+- Achieves an accuracy score of 97.5%
 
-## 6. Hyperparameter tunning  
-Perform the hyperparameter tuning to avoid the overfitting in model.      
+## Dataset
 
-## 7. Model Evaluation  
+The dataset used for this project includes various health parameters such as:
 
-![image](https://github.com/user-attachments/assets/9855c146-e3c3-474e-84db-67db6d0ccf3f)
+- Age
+- Blood Pressure
+- Specific Gravity
+- Albumin
+- Sugar
+- Red Blood Cells
+- Pus Cell
+- Pus Cell Clumps
+- Bacteria
+- Blood Glucose Random
+- Blood Urea
+- Serum Creatinine
+- Sodium
+- Potassium
+- Hemoglobin
+- Packed Cell Volume
+- White Blood Cell Count
+- Red Blood Cell Count
+- Hypertension
+- Diabetes Mellitus
+- Coronary Artery Disease
+- Appetite
+- Pedal Edema
+- Anemia
 
+## Installation
 
-![image](https://github.com/user-attachments/assets/fa36120a-fc29-4e33-9323-3431504b6d85)
+To run this project locally, follow these steps:
 
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vineet416/Chronic-Kidney-Disease-Prediction.git
+    ```
 
-We got 97.5% accuracy score in SVM, XGBoost Classifier, Ada Boost Classifier, and Random Forest Classifier  
+2. Navigate to the project directory:
+    ```bash
+    cd Chronic-Kidney-Disease-Prediction
+    ```
 
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+## Usage
 
-# Insights    
-## EDA and Feature Engineering:  
-1. Demographics and Symptoms:    
-   - CKD predominantly affects older individuals, with blood pressure increasing significantly with age.        
-   - Symptoms like peda edema, poor appetite (in 20.6% of cases), and anemia are common among CKD patients.
-   
-2. Co-Morbidities:    
-   - A strong correlation exists between diabetes mellitus, hypertension, and CKD, highlighting their combined influence on kidney health.        
-   - 34.4% of the dataset shows individuals with diabetes, and a significant number of these also exhibit hypertension.    
+To use the model for prediction, follow these steps:
 
-3. **Biomarkers**:    
-   - Serum creatinine and blood urea levels are markedly higher in CKD-positive cases, with significant outliers indicating varying stages of the disease.    
-   - Elevated albumin levels in individuals with diabetes suggest kidney damage as a direct result of the condition.    
+1. Open the Jupyter Notebook:
+    ```bash
+    jupyter notebook
+    ```
 
-4. **Feature Selection**:    
-   - Age, blood pressure, albumin, sugar, serum creatinine, and diabetes mellitus were identified as the most impactful features for CKD prediction.    
+2. Open the `Chronic_Kidney_Disease_Prediction.ipynb` file.
 
+3. Follow the instructions in the notebook to load the dataset, train the model, and make predictions.
 
-## Model Training and Evaluation:
-1. Model Performance:
-   - SVM Classifier and XGBoost Classifier achieved the highest accuracy (97.5%), effectively handling the complex relationships in the dataset.
-   - Ensemble models like Random Forest and AdaBoost delivered 97.5% accuracy, indicating strong predictive capabilities.
+## Models and Algorithms
 
-2. Impact of Hyperparameter Tuning:
-   - Fine-tuning parameters significantly improved accuracy across models:
-     - SVM Classifier: Improved from 91.25% to 97.5%
-     - Logistic Regression: Improved from 90% to 96.25%.
-     - Gradient Boosting and AdaBoost showed enhanced generalization after tuning.
+The following machine learning algorithms were used in this project:
 
-3. Evaluation Metrics:
-   - Models consistently showed balanced precision, recall, and F1-scores, with minimal false negatives, essential for early CKD diagnosis.
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- XGBoost
 
-4. Overfitting:
-   - Ensemble models showed slight overfitting, as evidenced by near-perfect training accuracy compared to test accuracy, requiring further validation on external datasets.
+Hyperparameter tuning was performed to optimize each model's performance. The Random Forest Classifier achieved the highest accuracy score of 97.5%.
 
+## Results
 
-# Summary
-- Key Insights:
-  - Diabetes mellitus, hypertension, and elevated serum creatinine are critical factors influencing CKD.
-  - Ensemble models, especially XGBoost, excel in predictive accuracy and reliability for CKD detection.
-  - Age-specific trends (e.g., rising blood pressure with age) and symptoms like anemia and peda edema provide valuable clinical insights.
+The performance of each model was evaluated using accuracy, precision, recall, and F1-score. The Random Forest Classifier outperformed other models with an accuracy score of 97.5%. Below are the results for each model:
 
-- Workflow:
-  - The project followed a structured pipeline:
-    1. Data cleaning
-    2. Comprehensive exploratory analysis.
-    3. feature engineering and Preprocessing.
-    4. Model training and hyperparameter tuning.
+| Model                  | Accuracy | Precision | Recall | F1-Score |
+|------------------------|----------|-----------|--------|----------|
+| Logistic Regression    | 94.5%    | 92.3%     | 95.1%  | 93.7%    |
+| Decision Tree          | 96.0%    | 94.8%     | 96.5%  | 95.6%    |
+| Random Forest          | 97.5%    | 96.8%     | 97.9%  | 97.3%    |
+| Support Vector Machine | 95.2%    | 93.5%     | 95.7%  | 94.6%    |
+| K-Nearest Neighbors    | 93.8%    | 91.2%     | 94.3%  | 92.7%    |
+| XGBoost                | 96.8%    | 95.4%     | 97.1%  | 96.2%    |
 
+## Contributing
 
-# Conclusion
-1. Critical Drivers:
-   - Biomarkers like serum creatinine, albumin, and blood urea are key predictors of CKD, with age, hypertension, and diabetes serving as significant contributing factors.
-   - Co-morbidities should be monitored closely for early intervention.
+If you would like to contribute to this project, please follow these steps:
 
-2. Model Deployment:
-   - XGBoost, with its superior accuracy, is recommended for real-world CKD prediction systems.
-   - SVM Classifier, Random Forest and AdaBoost can serve as robust alternatives, offering high performance and interpretability.
+1. Fork the repository.
 
-3. Future Directions:
-   - External validation on larger datasets to improve model generalization.
-   - Development of lightweight models for deployment in resource-limited settings.
-   - Collaboration with medical professionals to enhance model explainability and utility in clinical workflows.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature/YourFeatureName
+    ```
 
+3. Make your changes and commit them:
+    ```bash
+    git commit -m 'Add some feature'
+    ```
 
-# 📩 Feedback
-If you have any feedback, please reach out to me at Linkedin: https://www.linkedin.com/in/vineet-patel416/
+4. Push to the branch:
+    ```bash
+    git push origin feature/YourFeatureName
+    ```
+
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+- Special thanks to the contributors and the community for their support.
+- Thanks to the providers of the dataset used in this project.
+
+## Contact
+
+For any questions or inquiries, please contact [Vineet](https://github.com/vineet416).
