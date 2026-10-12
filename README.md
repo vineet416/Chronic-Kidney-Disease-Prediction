@@ -1,5 +1,5 @@
 # Chronic Kidney Disease Prediction
-
+ 
 A machine-learning project that predicts whether a patient has chronic kidney disease (CKD) from 24 clinical and lab measurements. It covers exploratory analysis, preprocessing, and a comparison of eight tuned classifiers. The goal is a fast, data-driven screening aid for early CKD detection.
 
 ## Project Files
